@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Sections Weight Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/Elsafwa_Steel.png" alt="Logo" class="logo"> <!-- تعديل مسار اللوجو -->
+        <h1>Steel Sections Weight Calculator</h1>
+        
+        <label for="sectionType">Select Steel Section Type:</label>
+        <select id="sectionType" onchange="showFields()">
+            <option value="">--Select--</option>
+            <option value="Steel Plates and Sheets" data-image="images/steel_plates_sheets.png">Steel Plates and Sheets</option>
+            <option value="Chequered Steel Plates" data-image="images/chequered_steel_plates.png">Chequered Steel Plates</option>
+            <option value="Seamless Steel Pipes - Circular" data-image="images/seamless_steel_pipes.png">Seamless Steel Pipes - Circular</option>
+            <option value="Hollow Structural Sections - Square" data-image="images/hollow_structural_square.png">Hollow Structural Sections - Square</option>
+            <option value="Hollow Structural Sections - Rectangular" data-image="images/hollow_structural_rectangular.png">Hollow Structural Sections - Rectangular</option>
+            <option value="Round Steel Bars" data-image="images/round_steel_bars.png">Round Steel Bars</option>
+            <option value="Square Steel Bars" data-image="images/square_steel_bars.png">Square Steel Bars</option>
+            <option value="Flat Bars" data-image="images/flat_bars.png">Flat Bars</option>
+            <option value="Equal Angles" data-image="images/equal_angles.png">Equal Angles</option>
+            <option value="Unequal Angles" data-image="images/unequal_angles.png">Unequal Angles</option>
+            <option value="T-profile" data-image="images/t_profile.png">T-profile</option>
+            <option value="Hexagonal Sections" data-image="images/hexagonal_sections.png">Hexagonal Sections</option>
+            <option value="UPN" data-image="images/upn.png">UPN</option>
+            <option value="IPN" data-image="images/ipn.png">IPN</option>
+            <option value="IPE" data-image="images/ipe.png">IPE</option>
+            <option value="HEA" data-image="images/hea.png">HEA</option>
+            <option value="HEB" data-image="images/heb.png">HEB</option>
+        </select>
+        
+
+        <div id="fields" class="fields"></div>
+
+        
+        <input type="number" id="quantity" placeholder="Enter quantity" value="1" oninput="calculateWeight()">
+
+        <img id="sectionImage" src="" alt="Section Image" style="display: none;">
+
+        <div id="result" class="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
